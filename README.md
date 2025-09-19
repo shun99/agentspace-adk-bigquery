@@ -99,7 +99,7 @@ BIGQUERY_PROJECT_ID="<YOUR_BIGQUERY_PROJECT_ID>"
 
 1.  **スコープ付きでログイン:** このコマンドを実行し、ユーザー認証情報に必要なAPIスコープを付与します。ブラウザウィンドウが開き、承認を求められます。
     ```bash
-    gcloud auth application-default login --scopes='openid,https://www.googleapis.com/auth/bigquery,https://www.googleapis.com/auth/userinfo.email,https://www.googleapis.com/auth/cloud-platform'
+    gcloud auth application-default login --scopes='openid,https://www.googleapis.com/auth/userinfo.email,https://www.googleapis.com/auth/bigquery'
     ```
 
 2.  **Quotaプロジェクトの設定:** このコマンドは、APIの課金と割り当てに使用するプロジェクトを指定します。ユーザー認証情報を使用する際に必要です。
@@ -130,7 +130,7 @@ export PROJECT_ID="<YOUR_PROJECT_ID>"
 export AUTH_ID="bigquery-auth"
 export OAUTH_CLIENT_ID="<YOUR_CLIENT_ID_FROM_STEP_1>"
 export OAUTH_CLIENT_SECRET="<YOUR_CLIENT_SECRET_FROM_STEP_1>"
-export REQUIRED_SCOPE="https://www.googleapis.com/auth/cloud-platform"
+export REQUIRED_SCOPE="https://www.googleapis.com/auth/bigquery"
 export OAUTH_AUTH_URI="https://accounts.google.com/o/oauth2/auth?client_id=$OAUTH_CLIENT_ID&response_type=code&access_type=offline&prompt=consent"
 export OAUTH_TOKEN_URI="https://oauth2.googleapis.com/token"
 
